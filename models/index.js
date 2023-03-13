@@ -16,6 +16,6 @@ const mongodbUri = process.env.MONGODBURI;
 
 module.exports ={
     //this one points to models/recipe.js
-    Recipes: require('./recipe'),
+    Recipe: require('./recipe'),
     seedItems: require('./seed')
 }
