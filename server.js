@@ -10,6 +10,7 @@ const db = require('./models');
 
 const recipeControl = require('./controllers/recipes');
 const { clear } = require('console');
+const recipe = require('./models/recipe');
 // const exp = require('constants');
 
 const app = express();
@@ -42,7 +43,15 @@ app.use(express.urlencoded({ extended: true }))
 //route mounting HERE WE GOOOOO:
 ////////////////////////////////
 
-
+//this mounts the quick finds to the home page
+app.get('/', function(req, res){
+    db.Recipe.find({quickFinds: true})
+        .then(recipes => {
+            res.render('home', {
+                recipes: recipes
+            })
+        })
+})
 
 //GET request to seed data
 app.get('/seed', function(req, res){
