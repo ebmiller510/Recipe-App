@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('./partials/header.ejs', {title: `${recipe.recipeName} | YUM`}) %>
+    <link rel="stylesheet" href="/styles/recipe-details.css">
+</head>
+
+<body>
+    <%- include('./partials/nav.ejs') %>
+
+    <div>
+        <img src="<%= recipe.photo %>">
+        <h2 class="product-name"><%= recipe.recipeName %></h2>
+        <section>
+            <p><strong>Description:</strong> <%= recipe.description %></p>
+            <p><strong>Number of Ingredients:</strong> <%= recipe.numOfIng %> </p>
+            <p><strong>Ingredients:</strong> <%= recipe.ingredients %></p>
+
+            <p><strong>Instructions:</strong> <%= `${recipe.instructions}` %></p>
+            
+        </section>
+
+        <section class="actions">
+            <button class="btn"><a href="/recipes/<%= recipe._id %>/edit">Edit</a></button>
+            <form method="POST" action="/recipes/<%= recipe._id %>?_method=DELETE">
+                <input class="btn" type="submit" value="Delete" />
+            </form>
+
+        </section>
+
+        <section>
+            
+
+        </section>
+        
+    </div>
+
+    <%- include('./partials/footer.ejs') %>
+</body>
+
+</html>

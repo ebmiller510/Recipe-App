@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('./partials/header.ejs', {title: 'All Recipes'}) %>
+    <link rel="stylesheet" href="/styles/recipe-index.css">
+</head>
+
+<body>
+    <%- include('./partials/nav.ejs') %>
+
+    <main>
+        <section class="product-listings">
+            <h1>Your Recipes</h1>
+            <ul>
+                <!-- so The "Recipe" is capital because it's defined in the recipes.js for this page's route -->
+                <% for (let recipe of Recipe) { %>
+                <li>
+                    <figure>
+                        <img src="<%= recipe.photo %>">
+                        <figcaption>
+                            <h4><%= recipe.recipeName %></h4>
+                            <p> <%= recipe.description %> Number of ingredients: <%= recipe.ingredients %></p>
+                            <a href="/recipes/<%= recipe._id %>">Make It!</a>
+                        </figcaption>
+                    </figure>
+                </li>
+                <% } %>
+            </ul>
+        </section>
+    </main>
+
+    <%- include('./partials/footer.ejs') %>
+</body>
+
+</html>
