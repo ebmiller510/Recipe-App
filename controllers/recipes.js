@@ -30,12 +30,13 @@ router.get('/', function(req, res){
 })
 
 
-//NEW RECIPE ROUTE 
+//NEW RECIPE ROUTE----G2G
 router.get('/new', (req, res) => {
     res.render('new-recipe')
 })
 
-//CREATE RECIPE ROUTE
+//CREATE RECIPE ROUTE---G2G 
+//issue: the form has an err when I try to use check the quickFind true 
 router.post('/', (req, res) => {
     db.Recipe.create(req.body)
     .then(recipe => {
@@ -60,7 +61,34 @@ router.get('/:id', function(req, res){
 })
 
 
-//
+
+
+
+//EDIT RECIPE ROUTE
+router.get('/:id/edit', function(req, res){
+    db.Recipe.findById(req.params.id)
+    .then(recipe => {
+        res.render('edit-recipe', {
+            recipe: recipe
+        })
+    })
+})
+
+
+//UPDATE RECIPE ROUTE
+router.put('/:id', function(req, res){
+    db.Recipe.findByIdAndUpdate(
+        req.params.id, 
+        req.body,
+        {new: true}
+    )
+    .then(recipe => {
+        res.redirect('/recipes/' + recipe._id)
+    })
+})
+
+
+
 
 
 module.exports = router

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- need to incorporate recipeTYPE into the edit form -->
+<head>
+    <%- include('./partials/header.ejs', {title: 'Edit Recipe | YUM'}) %>
+    <link rel="stylesheet" href="/styles/recipe-form.css">
+</head>
+
+<body>
+    <%- include('./partials/nav.ejs') %>
+
+    <h1>Edit Recipe </h1>
+
+	<form method="POST" action="/recipes/<%= recipe._id %>?_method=PUT">
+		<label for="name">Recipe:</label>
+		<input type="text" name="name" id="name" value="<%= recipe.recipeName %>" required>
+
+		<label for="description">Description:</label>
+		<textarea name="description" id="description" value="<%= recipe.description %>"></textarea>
+
+		<label for="numOfIng">Number of Ingredients: </label>
+		<input step="1" type="number" name="numOfIng" id="numOfIng" value="<%= recipe.numOfIng %>"  min="1">
+
+		<label for="ingredients">Ingredients</label>
+		<input type="text" name="ingredients" id="ingredients" value="<%= recipe.ingredients %>" required>
+
+		<label for="photo">Photo URL:</label>
+		<input type="text" name="photo" id="photo" value="<%= recipe.photo %>" required>
+
+		<label for="quickFinds">Quick Finds:</label>
+		<input type="checkbox" name="quickFinds" id="quickFinds">
+
+        <label for="instructions">Instructions:</label>
+		<textarea name="instructions" id="instructions" value="<%= recipe.instructions %>"></textarea>
+
+		<button type="submit">Add Product</button>
+	</form>
+
+    <%- include('./partials/footer.ejs') %>
+</body>
+
+</html>
