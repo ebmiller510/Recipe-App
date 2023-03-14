@@ -64,7 +64,7 @@ router.get('/:id', function(req, res){
 
 
 
-//EDIT RECIPE ROUTE
+//EDIT RECIPE ROUTE---G2G
 router.get('/:id/edit', function(req, res){
     db.Recipe.findById(req.params.id)
     .then(recipe => {
@@ -75,7 +75,7 @@ router.get('/:id/edit', function(req, res){
 })
 
 
-//UPDATE RECIPE ROUTE
+//UPDATE RECIPE ROUTE---G2G
 router.put('/:id', function(req, res){
     db.Recipe.findByIdAndUpdate(
         req.params.id, 

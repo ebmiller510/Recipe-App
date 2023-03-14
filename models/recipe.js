@@ -16,7 +16,7 @@ const recipeSchema = new mongoose.Schema({
     numOfIng: {type: Number, min: 1},
     ingredients: {type: [String]},
     quickFinds: {type: Boolean, default: false},
-    instructions: String,
+    instructions: String
     // reviews: {type: Schema, ref: Review}
 })
 
