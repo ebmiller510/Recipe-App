@@ -3,6 +3,7 @@
 
 //
 const express = require('express')
+const { seedItems } = require('../models')
 const router = express.Router()
 
 const db = require('../models')
@@ -52,8 +53,12 @@ router.get('/:id', function(req, res){
 
     db.Recipe.findById(req.params.id)
     .then(recipe => {
+
+        console.log(recipe.reviews)
+
         res.render('recipe-details', {
-            recipe: recipe
+            recipe: recipe,
+            review: recipe.reviews
         })
     })        
     .catch(() => res.send('404 Error: Page Not Found'))
@@ -87,7 +92,10 @@ router.put('/:id', function(req, res){
     })
 })
 
-
+router.delete('/:id', function(req, res){
+    db.Recipe.findByIdAndRemove(req.params.id)
+        .then(recipe => res.redirect('/recipes'))
+})
 
 
 

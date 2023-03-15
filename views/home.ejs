@@ -22,7 +22,7 @@
             <ul class="sf-grid">
                 <% for (let recipe of recipes) { %>
                 <li>
-                    <img src="<%= recipe.photo %>" >
+                    <img class="col-6" src="<%= recipe.photo %>" >
                     <h3><%= recipe.recipeName %></h3>
                     <p><%= recipe.description %> </p>
                     <a href="/recipes/<%= recipe._id %>" class="btn">Make It!</a>

@@ -1,4 +1,4 @@
-//this is Scott's styling code and I plan on revamping it for parts 2 and part 3
+/* //this is Scott's styling code and I plan on revamping it for parts 2 and part 3 */
 
 
 
@@ -21,10 +21,16 @@ main {
     list-style: none;
     padding: 0;
 }
+figure{
+    border: 2px solid #ccc;
+}
+.fitContent{
+    height: fit-content;
+}
 
 .product-listings li {
     margin-bottom: 40px;
-    border: 2px solid #ccc;
+    /* border: 2px solid #ccc; */
     padding: 20px;
     border-radius: 4px;
     position: relative;
@@ -33,11 +39,12 @@ main {
 
 .product-listings li img {
     max-width: 100%;
-    height: auto;
+    margin-top: 20px;
+
 }
 
 figcaption {
-    text-align: left;
+    text-align: center;
 }
 
 .product-listings li h4 {
@@ -47,7 +54,8 @@ figcaption {
 
 .product-listings li p {
     font-size: 16px;
-    margin-bottom: 10px;
+    margin-bottom: 40px;
+    margin-top: 20px;
 }
 
 .product-listings li a {
@@ -55,12 +63,11 @@ figcaption {
     color: #fff;
     font-size: 18px;
     padding: 10px 20px;
+    
     border: none;
     border-radius: 4px;
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
     text-decoration: none;
+
 }
 
 .product-listings li a:hover {

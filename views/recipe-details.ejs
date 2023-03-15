@@ -10,7 +10,7 @@
     <%- include('./partials/nav.ejs') %>
 
     <div>
-        <img src="<%= recipe.photo %>">
+        <img class="col-5" src="<%= recipe.photo %>">
         <h2 class="product-name"><%= recipe.recipeName %></h2>
         <section>
             <p><strong>Description:</strong> <%= recipe.description %></p>
@@ -20,6 +20,13 @@
             <p><strong>Instructions:</strong> <%= `${recipe.instructions}` %></p>
             
         </section>
+        <section id="recipeReviews">
+            <%for (let review of recipe.reviews) { %>
+                <p>Reviewer: <%=review.reviewerName %></p>
+
+            <% }%>
+
+        </section>
 
         <section class="actions">
             <button class="btn"><a href="/recipes/<%= recipe._id %>/edit">Edit</a></button>
@@ -28,11 +35,9 @@
             </form>
 
             <!-- //review buttons -->
-            
-            <button class="btn"> <a href="/reviews">Review</a></button>
-
-            <form method="POST" action="/reviews?_method=POST">
-                <input class="btn" type="submit" value="Review This Recipe"
+        
+            <form method="POST" action="/reviews/new/<%=recipe._id%>?_method=GET">
+                <input class="btn" type="submit" value="Review">
             </form>
 
         </section>
