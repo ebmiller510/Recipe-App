@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const reviewSchema = require('./review');
 const Review = require('./review')
 //recipe schema 
 //two thoughts about me secondary schema:
@@ -16,8 +17,8 @@ const recipeSchema = new mongoose.Schema({
     numOfIng: {type: Number, min: 1},
     ingredients: {type: [String]},
     quickFinds: {type: Boolean, default: false},
-    instructions: String
-    // reviews: {type: Schema, ref: Review}
+    instructions: String,
+    reviews: [reviewSchema]
 })
 
 //name of the model is 'Recipe' and it follows the schema defined in the variable recipeSchema

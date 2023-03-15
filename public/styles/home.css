@@ -1,0 +1,57 @@
+body {
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center; */
+}
+
+main {
+  display: flex;
+  text-align: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin: 5vw;
+}
+main li {
+  list-style-type: none;
+}
+
+.hook {
+  text-decoration: none;
+  height: 14vw;
+  min-height: 97px;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+}
+.hook h2 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.btn {
+  text-decoration: none;
+}
+
+.sf-grid {
+  padding: 0;
+}
+
+.selling-fast {
+  margin: 2rem;
+}
+.selling-fast li {
+  margin-top: 2.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  min-height: 272px;
+}
+
+.sf-grid {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+  list-style: none;
+  margin-top: 3rem;
+}
+
+/* About section styles *//*# sourceMappingURL=home.css.map */

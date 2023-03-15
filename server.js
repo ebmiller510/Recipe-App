@@ -9,6 +9,7 @@ const methodOverride = require('method-override');
 const db = require('./models');
 
 const recipeControl = require('./controllers/recipes');
+const reviewsControl = require('./controllers/reviews');
 const { clear } = require('console');
 const recipe = require('./models/recipe');
 // const exp = require('constants');
@@ -69,12 +70,15 @@ app.get('/seed', function(req, res){
 })
 
 //about route
-
+app.get('/about', function(req, res){
+    res.render('about')
+})
 
 
 //ref line 11 (.)
 app.use('/recipes', recipeControl)
 
+app.use('/reviews', reviewsControl)
 //404 route
 
 

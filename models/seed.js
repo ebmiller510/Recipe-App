@@ -80,7 +80,7 @@ const seedItems =
               "orange peel"
             ],
             quickFinds: true,
-            photo: undefined,
+            photo: "https://www.thespruceeats.com/thmb/ztnL3iwFJ09ut-XAPAhvFgTsgP8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/old-fashioned-cocktail-recipe-and-history-759328-hero-01-c9002b3aa6d24a3781befa19dc69eb0e.jpg",
             instructions: "1. In a glass, muddle the sugar and bitters with a splash of water. \n2. Add a large ice cube and the bourbon. \n3. Stir until well chilled. \n4. Garnish with an orange peel and serve."
           },
 

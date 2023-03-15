@@ -1,0 +1,167 @@
+body{
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center; */
+}
+
+main{
+    display: flex;
+    text-align: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+
+    li{
+        list-style-type: none;
+    }
+    margin: 5vw;
+}
+
+
+.hook{
+    text-decoration: none;
+    height: 14vw;
+    min-height: 97px;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+
+    h2{
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    }
+}
+
+.btn{
+    text-decoration: none;
+
+}
+
+.sf-grid{
+    padding: 0;
+}
+
+.selling-fast{
+    margin: 2rem;
+    li{
+        margin-top: 2.5rem;
+        margin-bottom: 2rem;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+        min-height: 272px;
+    }
+
+}
+.sf-grid {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    list-style: none;
+    margin-top: 3rem;
+}
+
+
+//this is Scott's styling code and I plan on revamping it for parts 2 and part 3
+
+/* About section styles */
+// *{
+// }
+// .about {
+//     background-color: #fff;
+//     padding: 1rem;
+// }
+
+// .about h2 {
+//     font-size: 2rem;
+//     margin-bottom: 1rem;
+// }
+
+// .about p {
+//     margin-bottom: 1rem;
+// }
+
+// main{
+//     li{
+//         list-style-type: none;
+//     }
+//         width: 100%;
+
+// }
+
+
+// // hook section
+// .hook {
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     flex-wrap: wrap;
+//     flex-direction: column;
+//     h2{
+//     font-size: 3rem;
+//     margin-bottom: 1rem;
+//     //come in and change the font-family and border shading 
+// }
+//     .btn{
+//             text-decoration: none;
+
+//     }
+// }
+
+
+
+
+
+// /* selling fast products section styles */
+// .selling-fast {
+//     background-color: #f7f7f7;
+//     padding: 2rem;
+// }
+
+// .selling-fast {
+//     li{
+//     min-height: 350px;
+// }   h2 {
+//     display: flex;
+//     justify-content: center;
+//     font-size: 2rem;
+//     margin-top: rem;
+//     margin-bottom: 2rem;
+// }
+// }
+
+
+// .sf-grid {
+//     display: flex;
+//     flex-wrap: wrap;
+//     justify-content: space-between;
+//     list-style: none;
+//     margin-top: 3rem;
+    
+// }
+
+// .sf-grid li {
+//     flex-basis: calc(33.33% - 1rem);
+//     margin-bottom: 2rem;
+//     background-color: #fff;
+//     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+//     overflow: hidden;
+// }
+
+// .sf-grid img {
+//     width: 100%;
+//     height: 75%;
+//     // object-fit: cover;
+// }
+
+// .sf-grid h3 {
+//     font-size: 1.5rem;
+//     margin: 0.5rem 1rem;
+// }
+
+// .sf-grid p {
+//     margin: 0.5rem 1rem;
+// }
+
+
+// #new-product-head{
+//     font-size: 2 rem !important;
+    
+// }

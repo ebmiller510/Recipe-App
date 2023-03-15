@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>New Review</title>
+  </head>
+  <body>
+    <h1>New Review</h1>
+    <form action="/reviews/create" method="POST">
+      <label for="reviewerName">Reviewer Name:</label>
+      <input type="text" id="reviewerName" name="reviewerName"><br><br>
+      
+      <label for="comment">Comment:</label>
+      <textarea id="comment" name="comment" rows="4" cols="50" required></textarea><br><br>
+      
+      <label for="rating">Rating (0-5):</label>
+      <input type="number" id="rating" name="rating" min="0" max="5"><br><br>
+      
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>
