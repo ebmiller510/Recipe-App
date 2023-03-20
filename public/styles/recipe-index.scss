@@ -1,6 +1,7 @@
 /* //this is Scott's styling code and I plan on revamping it for parts 2 and part 3 */
-
-
+.row{
+    --bs-gutter-x: 0 !important;
+}
 
 main {
     max-width: 1200px;

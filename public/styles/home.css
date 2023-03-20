@@ -1,5 +1,6 @@
 .row {
   --bs-gutter-x: 0rem !important;
+  --bs-md-gutter-x: 0rem !important;
 }
 
 body {
