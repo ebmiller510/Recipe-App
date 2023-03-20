@@ -32,11 +32,22 @@ router.get('/', function(req, res){
 
 
 router.get('/food', function(req, res){
-    db.Recipe.find({recipeType: 'food'})
+    db.Recipe.find({recipeType: "food"})
         .then(foodrecipes => {
-            console.log(foodrecipes)
-            res.render(foodrecipes)
+            res.render('foodrecipes', {
+                Recipe: foodrecipes
+            })
 
+        })
+})
+
+router.get('/drinks', function(req, res){
+    db.Recipe.find({recipeType: "drink"})
+        .then(drinkrecipes => {
+            res.render('drinkrecipes', {
+                Recipe: drinkrecipes
+               
+            })
         })
 })
 

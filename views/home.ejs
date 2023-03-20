@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <%- include('./partials/header.ejs', {title: 'Recipe APP'}) %>
+    <%- include('./partials/header.ejs', {title: 'YUMY | Recipe App'}) %>
     <link rel="stylesheet" href="/styles/home.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,18 +19,31 @@
     <%- include('./partials/nav.ejs') %>
 
     <main >
+
+
         <section class="hook">
-            <h2>View All Recipes</h2>
+
+            <% let h2title = "View All Recipes" %>
+            <% let h2letters = h2title.split('')%>
+
+            <h2 class="hook">
+                <% h2letters.forEach(function(letter) { %>
+                    <span><%= letter %></span>
+                  <% }) %> </h2>
+
+
             <a href="/recipes" class="btn">Click Here</a>
         </section>
 
         <!-- now the quick finds class -->
         <section class="selling-fast">
             <h2>Quick Finds</h2>
-            <ul class="sf-grid">
+            <ul class="sf-grid" >
+            
                 <% for (let recipe of recipes) { %>
-                <li>
-                    <img class="col-6" src="<%= recipe.photo %>" >
+
+                <li class="col-4">
+                    <img class="col-10" src="<%= recipe.photo %>" >
                     <h3><%= recipe.recipeName %></h3>
                     <p><%= recipe.description %> </p>
                     <a href="/recipes/<%= recipe._id %>" class="btn">Make It!</a>
@@ -49,9 +62,9 @@
 
         <section class="about">
             <h2>About Us</h2>
-            <p>At YUM, we hate it when we open the fridge and don't know what to make. Own app is there to help you find and remember all of the meals snakc and drinks that you love!
+            <p>At YUMY, we hate it when we open the fridge and don't know what to make. Our app is here to <strong>help you</strong> find and <strong>remember</strong> all of the meals, snack and drinks that you love!
             </p>
-            <a href="/about" class="btn">Learn More</a>
+            <!-- <a href="/about" class="btn">Learn More</a> -->
         </section>
     </main>
 

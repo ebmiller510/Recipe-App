@@ -1,14 +1,26 @@
 <header class="row">
 
-    <h1 class="col-3">YUMY</h1>
+    <% if ( href="/") { %>
+    <h1 class="col-md-3" id="animated-heading"><a href="/">YUMY</a></h1>
+    <% } else { %>
+        <h1 class="col-md-3" ><a href="/">YUMY</a></h1>
+        <% } %>
 
-    <nav class="col-3">
-        <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/recipes">Recipes</a></li>
-            <li><a href="/about">About Us</a></li>
+    <section class="col-6">
 
-            <link rel="stylesheet" href="/styles/main.css">
-        </ul>
-    </nav>
+    </section>
+
+    <div class="col-md-3"> 
+        
+        <nav class="col-md">
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/recipes">Recipes</a></li>
+                <!-- <li><a href="/about">About Us</a></li> -->
+
+                <link rel="stylesheet" href="/styles/main.css">
+            </ul>
+        </nav>
+    </div>
+  
 </header>

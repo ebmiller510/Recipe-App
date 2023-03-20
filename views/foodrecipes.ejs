@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <%- include('./partials/header.ejs', {title: 'All Recipes'}) %>
+    <%- include('./partials/header.ejs', {title: 'Food Recipes'}) %>
     <link rel="stylesheet" href="/styles/recipe-index.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -28,7 +28,7 @@
                 <a  href="/recipes/drinks"><button> Drink </button></a>
             </div>
 
-            <ul class="row ">
+            <ul class="row">
                 <!-- so The "Recipe" is capital because it's defined in the recipes.js for this page's route -->
                 <% for (let recipe of Recipe) { %>
                 <li class="col-4">

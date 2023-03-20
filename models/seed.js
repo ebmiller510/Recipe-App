@@ -160,7 +160,7 @@ const seedItems =
             description: "A tropical twist on the classic margarita, featuring exotic passion fruit juice and tangy lime.",
             numOfIng: 5,
             ingredients: ["tequila", " passion fruit juice", " lime juice", " triple sec", " ice"],
-            quickFinds: true,
+            quickFinds: false,
             instructions: "Instructions:\n1. Fill a cocktail shaker halfway with ice.\n2. Pour 2 oz of tequila, 2 oz of passion fruit juice, 1 oz of lime juice, and 1 oz of triple sec into the shaker.\n3. Shake vigorously for 15-20 seconds.\n4. Strain the mixture into a salt-rimmed glass filled with ice.\n5. Garnish with a slice of lime or a wedge of passion fruit, if desired.\n6. Enjoy your tropical twist on the classic margarita!\n\nNote: If you prefer your margaritas less strong, you can adjust the ratio of tequila to juice to taste. You can also use a blender to make a frozen version of this drink by blending all the ingredients with ice until smooth."
         },
 

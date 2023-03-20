@@ -1,7 +1,16 @@
+.row {
+  --bs-gutter-x: 0rem !important;
+}
+
 body {
   /* display: flex;
   flex-direction: column;
   justify-content: center; */
+  width: 100%;
+}
+
+header {
+  width: 100%;
 }
 
 main {
@@ -13,7 +22,14 @@ main {
 }
 main li {
   list-style-type: none;
-  margin: 5vw;
+}
+
+img.col-10 {
+  border-radius: 50%;
+  min-height: 20vh;
+  max-height: 20vh;
+  min-width: 20vh;
+  max-width: 20vh;
 }
 
 .hook {
@@ -24,14 +40,39 @@ main li {
   margin-bottom: 4rem;
 }
 .hook h2 {
-  font-size: 3rem;
+  font-size: 5.1vw;
   margin-bottom: 1rem;
   font-family: "Bungee Shade", cursive;
+  display: flex;
+  flex-direction: row;
 }
-.hook h3 {
+.hook h2 :nth-child(4) {
+  padding-right: 2.5vw;
+}
+.hook h2 :nth-child(8) {
+  padding-right: 2.5vw;
+}
+.hook h2 span {
+  font-size: 5.1vw;
+  display: flex;
+  flex-direction: row;
+  transition: transform 0.2s ease-out;
+}
+.hook h2 span:hover {
+  animation: letter-scale 0.5s ease-in-out;
+}
+.hook h2 h3 {
   font-family: "Staatliches", cursive;
 }
 
+@keyframes letter-scale {
+  0% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 .btn {
   text-decoration: none;
   font-family: "Aboreto", cursive;
@@ -64,7 +105,7 @@ main li {
 .sf-grid {
   display: flex;
   flex-wrap: wrap;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-between;
   list-style: none;
   margin-top: 3rem;
@@ -73,4 +114,21 @@ main li {
 .about h2 {
   font-family: "Aboreto", cursive;
   font-weight: bolder;
+}
+
+#animated-heading {
+  display: inline-block;
+  animation-name: scale-letters;
+  animation-duration: 1s;
+  animation-delay: 0.2s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes scale-letters {
+  from {
+    transform: scale(1, 1);
+  }
+  to {
+    transform: scale(1.2, 1.2);
+  }
 }/*# sourceMappingURL=home.css.map */

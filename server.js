@@ -69,10 +69,10 @@ app.get('/seed', function(req, res){
         })
 })
 
-//about route
-app.get('/about', function(req, res){
-    res.render('about')
-})
+//about route: to be added later
+// app.get('/about', function(req, res){
+//     res.render('about')
+// })
 
 
 //ref line 11 (.)
