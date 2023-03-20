@@ -4,9 +4,6 @@
 }
 
 body{
-    /* display: flex;
-    flex-direction: column;
-    justify-content: center; */
     width: 100%;
 }
 header{
@@ -24,7 +21,6 @@ main{
 
     li{
         list-style-type: none;
-        // margin: 5vw;
     }
     margin: 5vw;
 }
@@ -82,9 +78,6 @@ img.col-10{
     0% {
       transform: scale(1.2);
     }
-    // 50% {
-    //   transform: scale(1.2);
-    // }
     100% {
       transform: scale(1);
     }
