@@ -10,7 +10,7 @@ const Review = require('./review')
 
 
 const recipeSchema = new mongoose.Schema({
-    recipeType: {type: String, enum: ["food", "drink"]},
+    recipeType: {type: String, enum: ["food", "drink"], required: true},
     recipeName: {type: String, required: true},
     photo: {type: String},
     description: {type: String},

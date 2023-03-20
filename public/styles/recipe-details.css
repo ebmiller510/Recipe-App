@@ -44,3 +44,13 @@ strong {
 .featured {
     background-color: #ffd700;
 }
+.edit{
+    background-color: #F83A44;
+    color: white;
+
+}
+
+.actions{
+    display: flex;
+    justify-content: space-around;
+}

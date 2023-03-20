@@ -4,6 +4,15 @@
 <head>
     <%- include('./partials/header.ejs', {title: 'All Recipes'}) %>
     <link rel="stylesheet" href="/styles/recipe-index.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway+Dots&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Aboreto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
@@ -12,17 +21,26 @@
     <main>
         <section class="product-listings">
             <h1>Your Recipes</h1>
-            <ul>
+
+            <div class="categories">
+                <a href="/recipes/food"><button>food</button></a>
+                <button>drink</button>
+            </div>
+
+            <ul class="row ">
                 <!-- so The "Recipe" is capital because it's defined in the recipes.js for this page's route -->
                 <% for (let recipe of Recipe) { %>
-                <div class="col-2"></div>
-                <li class="row">
-                    <div class="fitContent">
-                        <figure class="col-8">
+                <li class="col-4">
+                    <div class="fitContent col-12">
+                        <figure class="">
                             <img class="col-8" src="<%= recipe.photo %>">
                             <figcaption>
                                 <h4><%= recipe.recipeName %></h4>
-                               <p> <%= recipe.description %> Ingredients: <%= recipe.ingredients %></p>
+
+                               <p> <%= recipe.description %> 
+                                <br><%=recipe.numOfIng%> Ingredients
+
+                                <br> Ingredients: <%= recipe.ingredients %></p>
                                 <a href="/recipes/<%= recipe._id %>">Make It!</a>
 
                             </figcaption>

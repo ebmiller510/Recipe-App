@@ -31,6 +31,16 @@ router.get('/', function(req, res){
 })
 
 
+router.get('/food', function(req, res){
+    db.Recipe.find({recipeType: 'food'})
+        .then(foodrecipes => {
+            console.log(foodrecipes)
+            res.render(foodrecipes)
+
+        })
+})
+
+
 //NEW RECIPE ROUTE----G2G
 router.get('/new', (req, res) => {
     res.render('new-recipe')
